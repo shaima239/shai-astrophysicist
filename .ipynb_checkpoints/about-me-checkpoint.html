@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al Shaima Al Rawahi | Astrophysics Portfolio</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f8f9fa;
+            color:  #061838;
+            line-height: 1.6;
+        }
+        header {
+            background:  #061838;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            margin: 0.5rem 0 0;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        nav {
+            background: #e9ecef;
+            padding: 0.8rem;
+            text-align: center;
+            border-bottom: 1px solid #dee2e6;
+        }
+        nav a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color:  #061838;
+            font-weight: 500;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+        section {
+            margin-bottom: 3rem;
+        }
+        h2 {
+            color:  #061838;
+            border-bottom: 2px solid  #061838;
+            padding-bottom: 0.5rem;
+        }
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+        .skill {
+            background: #e2e6ea;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        .project {
+            margin-bottom: 2rem;
+            border-left: 4px solid  #061838;
+            padding-left: 1.2rem;
+        }
+        .project h3 {
+            margin-bottom: 0.2rem;
+        }
+        .project p {
+            margin: 0.5rem 0;
+        }
+        .project-links a {
+            margin-right: 1rem;
+            text-decoration: none;
+            color:  #061838;
+            font-weight: 500;
+        }
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 1.5rem;
+            background: #e9ecef;
+            color:  #061838;
+            font-size: 0.9rem;
+        }
+        a {
+            color:  #061838;
+        }
+        @media (max-width: 600px) {
+            nav a {
+                display: inline-block;
+                margin: 0.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Al Shaima Al Rawahi</h1>
+        <p>MSc Astrophysics & Cosmology | Data Scientist | Space Technology Specialist</p>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="CV.pdf">CV (PDF)</a>
+    </nav>
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am an astrophysicist with hands-on experience in astronomical data reduction, machine learning, and scientific computing. My Master’s research involved reducing Hubble Space Telescope images and developing pipelines for exoplanet transit analysis. I am passionate about applying these skills to Earth observation, satellite operations, and space technology in Oman.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <span class="skill">Python (NumPy, Astropy, scikit-learn)</span>
+                <span class="skill">CCD Calibration / Aperture Photometry</span>
+                <span class="skill">Machine Learning (SVM, Neural Networks)</span>
+                <span class="skill">Bayesian Inference / MCMC</span>
+                <span class="skill">Git / GitHub</span>
+                <span class="skill">Bash / Linux</span>
+                <span class="skill">HEASoft / XSPEC</span>
+                <span class="skill">Fortran (basic)</span>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Featured Projects</h2>
+
+            <div class="project">
+                <h3>Hubble Space Telescope Data Pipeline</h3>
+                <p>Reduced and aligned HST WFC3/UVIS images of the globular cluster NGC 6440. Performed distortion correction, PSF photometry, and astrometric calibration using Python and Fortran. Produced high-precision stellar catalogs and proper-motion analysis to search for black hole candidates.</p>
+                <div class="project-links">
+                    <a href="https://github.com/shaima239/hst-ngc6440" target="_blank">📁 Code Repository</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>Machine Learning for Exoplanet Transit Classification</h3>
+                <p>Trained SVM and neural network models to detect exoplanetary transits in simulated and real datasets. Implemented data preprocessing, cross-validation, and error analysis in Python (scikit-learn, NumPy, Matplotlib).</p>
+                <div class="project-links">
+                    <a href="https://github.com/shaima239/exoplanet-ml" target="_blank">📁 Code Repository</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>Exoplanet Transit Analysis: WASP‑12b</h3>
+                <p>End‑to‑end data reduction of space‑ and ground‑based observations for WASP‑12b. Calibrated raw CCD data, performed aperture photometry, and built differential light curves. Used Bayesian MCMC (emcee) to extract planetary parameters, integrating TESS and TASTE datasets.</p>
+                <div class="project-links">
+                    <a href="https://github.com/shaima239/wasp12b-analysis" target="_blank">📁 Code Repository</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>Globular Cluster Morphology with Gaia DR3</h3>
+                <p>Processed Gaia DR3 data to quantify ellipticities of 126 globular clusters. Wrote custom Python scripts for cross‑matching, data visualization, and statistical analysis. Presented results on how these clusters are not as spherical as traditionally thought.</p>
+                <div class="project-links">
+                    <a href="https://github.com/shaima239/gaia-clusters" target="_blank">📁 Code Repository</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>High‑Energy Astrophysics: M51 with Swift</h3>
+                <p>Reduced UV and X‑ray data of the interacting galaxy system M51 using HEASoft and XSPEC. Produced co‑added images, light curves, and calibrated spectra. Modeled the X‑ray spectrum with absorbed power‑law fits to investigate AGN activity.</p>
+                <div class="project-links">
+                    <a href="https://github.com/shaima239/m51-swift" target="_blank">📁 Code Repository</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>📧 <a href="mailto:ashaimaamro@icloud.com">ashaimaamro@icloud.com</a><br>
+            🔗 <a href="https://github.com/shaima239" target="_blank">GitHub</a> | 
+            <a href="https://linkedin.com/in/shaima-alrawahi" target="_blank">LinkedIn</a></p>
+        </section>
+    </div>
+    <footer>
+        <p>© 2025 Shaima Al-Rawahi. Built with GitHub Pages.</p>
+    </footer>
+</body>
+</html>
