@@ -3,123 +3,256 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Al Shaima Al Rawahi | Astrophysics Portfolio</title>
+    <meta name="description" content="Portfolio of Al Shaima Al Rawahi - MSc Astrophysics & Cosmology, Data Scientist, Space Technology Specialist specializing in astronomical data analysis, machine learning, and Earth observation.">
+    <meta name="keywords" content="Astrophysics, Data Science, Space Technology, Earth Observation, Machine Learning, Python, Sentinel-2, HST, Exoplanets">
+    <meta name="author" content="Al Shaima Al Rawahi">
+    <title>Al Shaima Al Rawahi | Astrophysics & Space Data Science Portfolio</title>
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background: #f8f9fa;
-            color:  #061838;
-            line-height: 1.6;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: #f8f9fa;
+            color: #1a2a4f;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        /* Improved color contrast and modern touches */
+        :root {
+            --primary: #0a2540;
+            --primary-light: #1a3a5f;
+            --accent: #2d7a6e;
+            --accent-light: #409e8f;
+            --gray-bg: #f1f5f9;
+            --border: #e2e8f0;
+        }
+
         header {
-            background:  #061838;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
             color: white;
-            padding: 2rem;
+            padding: 3rem 2rem;
             text-align: center;
         }
+
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 2.8rem;
+            letter-spacing: -0.5px;
         }
+
         header p {
-            margin: 0.5rem 0 0;
-            font-size: 1.2rem;
-            opacity: 0.9;
+            margin: 0.75rem 0 0;
+            font-size: 1.25rem;
+            opacity: 0.92;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
+
         nav {
-            background: #e9ecef;
-            padding: 0.8rem;
+            background: white;
+            padding: 1rem;
             text-align: center;
-            border-bottom: 1px solid #dee2e6;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(8px);
+            background: rgba(255, 255, 255, 0.95);
         }
+
         nav a {
             margin: 0 1rem;
             text-decoration: none;
-            color:  #061838;
+            color: var(--primary);
             font-weight: 500;
+            transition: color 0.2s;
         }
+
         nav a:hover {
-            text-decoration: underline;
+            color: var(--accent);
+            text-decoration: none;
         }
+
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 2rem auto;
             padding: 0 1.5rem;
         }
+
         section {
-            margin-bottom: 3rem;
+            margin-bottom: 3.5rem;
+            background: white;
+            border-radius: 16px;
+            padding: 1.8rem 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            transition: box-shadow 0.2s;
         }
+
+        section:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
         h2 {
-            color:  #061838;
-            border-bottom: 2px solid  #061838;
+            color: var(--primary);
+            border-bottom: 3px solid var(--accent);
             padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            display: inline-block;
         }
+
         .skills-grid {
             display: flex;
             flex-wrap: wrap;
             gap: 0.8rem;
             margin-top: 1rem;
         }
+
         .skill {
-            background: #e2e6ea;
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
+            background: var(--gray-bg);
+            padding: 0.4rem 1.2rem;
+            border-radius: 30px;
             font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--primary);
+            border: 1px solid var(--border);
         }
+
         .project {
             margin-bottom: 2rem;
-            border-left: 4px solid  #061838;
-            padding-left: 1.2rem;
+            border-left: 4px solid var(--accent);
+            padding-left: 1.5rem;
+            transition: transform 0.1s;
         }
+
         .project h3 {
-            margin-bottom: 0.2rem;
+            margin-bottom: 0.4rem;
+            color: var(--primary-light);
+            font-size: 1.3rem;
         }
+
+        .project-meta {
+            font-size: 0.85rem;
+            color: #5a6e8a;
+            margin-bottom: 0.75rem;
+            font-family: monospace;
+        }
+
         .project p {
-            margin: 0.5rem 0;
+            margin: 0.75rem 0;
         }
-        .project-links a {
-            margin-right: 1rem;
-            text-decoration: none;
-            color:  #061838;
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 0.75rem 0;
+        }
+
+        .tech-tag {
+            background: #eef2ff;
+            color: var(--primary);
+            font-size: 0.7rem;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
             font-weight: 500;
         }
+
+        .project-links a {
+            margin-right: 1.2rem;
+            text-decoration: none;
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .project-links a:hover {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+
         footer {
             text-align: center;
-            margin-top: 3rem;
-            padding: 1.5rem;
-            background: #e9ecef;
-            color:  #061838;
+            margin-top: 2rem;
+            padding: 2rem;
+            background: var(--primary);
+            color: #cbd5e1;
             font-size: 0.9rem;
         }
+
         a {
-            color:  #061838;
+            color: var(--accent);
+            text-decoration: none;
         }
-        @media (max-width: 600px) {
-            nav a {
-                display: inline-block;
-                margin: 0.3rem;
-            }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-info {
+            background: var(--gray-bg);
+            padding: 1.2rem;
+            border-radius: 12px;
+            display: inline-block;
+            width: 100%;
+        }
+
+        @media (max-width: 700px) {
+            header h1 { font-size: 2rem; }
+            section { padding: 1.2rem; }
+            nav a { margin: 0 0.6rem; font-size: 0.9rem; }
+            .project { padding-left: 1rem; }
+        }
+
+        .btn-cv {
+            background: var(--accent);
+            color: white !important;
+            padding: 0.4rem 1rem;
+            border-radius: 30px;
+            transition: background 0.2s;
+        }
+        .btn-cv:hover {
+            background: var(--primary);
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Al Shaima Al Rawahi</h1>
-        <p>MSc Astrophysics & Cosmology | Data Scientist | Space Technology Specialist</p>
+        <p>Astrophysicist | Data Scientist | Space Technology Specialist</p>
+        <p style="font-size: 1rem; margin-top: 0.5rem;">MSc Astrophysics & Cosmology — Scientific Computing · Earth Observation · ML for Space</p>
     </header>
     <nav>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
+        <a href="#goals">Career</a>
         <a href="#contact">Contact</a>
-        <a href="CV.pdf">CV (PDF)</a>
+        <a href="CV.pdf" class="btn-cv" target="_blank">📄 Download CV (PDF)</a>
     </nav>
     <div class="container">
         <section id="about">
             <h2>About Me</h2>
-            <p>I am an astrophysicist with hands-on experience in astronomical data reduction, machine learning, and scientific computing. My Master’s research involved reducing Hubble Space Telescope images and developing pipelines for exoplanet transit analysis. I am passionate about applying these skills to Earth observation, satellite operations, and space technology in Oman.</p>
+            <p>
+            I'm an astrophysicist and data scientist with a Master's degree in Astrophysics & Cosmology, specialized in <strong>scientific computing, astronomical data pipelines, and machine learning</strong>. 
+            My research combines real Hubble Space Telescope data reduction, exoplanet transit modeling with Bayesian MCMC, and the development of robust classification models for transit signals.
+            </p>
+            <p>
+            I bring hands-on experience in <strong>end-to-end data workflows</strong>: from raw CCD calibration to high-level statistical inference. I'm now expanding my expertise into <strong>Earth observation (Sentinel-2, NDVI analysis)</strong> and satellite data science, aiming to contribute to the growing space technology sector in Oman and the MENA region.
+            </p>
+            <p>
+            🔭 <strong>What drives me:</strong> Turning complex datasets into actionable insights — whether detecting exoplanets, quantifying vegetation in arid climates, or enabling space-based solutions for real-world challenges.
+            </p>
         </section>
 
         <section id="skills">
@@ -127,12 +260,13 @@
             <div class="skills-grid">
                 <span class="skill">Python (NumPy, Astropy, scikit-learn)</span>
                 <span class="skill">CCD Calibration / Aperture Photometry</span>
-                <span class="skill">Machine Learning (SVM, Neural Networks)</span>
-                <span class="skill">Bayesian Inference / MCMC</span>
-                <span class="skill">Git / GitHub</span>
-                <span class="skill">Bash / Linux</span>
+                <span class="skill">Machine Learning (SVM, Neural Nets)</span>
+                <span class="skill">Bayesian Inference / MCMC (emcee)</span>
+                <span class="skill">Git / GitHub Actions</span>
+                <span class="skill">Bash / Linux / HPC</span>
                 <span class="skill">HEASoft / XSPEC</span>
-                <span class="skill">Fortran (basic)</span>
+                <span class="skill">Remote Sensing (Sentinel-2, rasterio)</span>
+                <span class="skill">SQL / Pandas / Data Visualization</span>
             </div>
         </section>
 
@@ -140,49 +274,108 @@
             <h2>Featured Projects</h2>
 
             <div class="project">
-                <h3>Hubble Space Telescope Data Pipeline</h3>
-                <p>Reduced and aligned HST WFC3/UVIS images of the globular cluster NGC 6440. Performed distortion correction, PSF photometry, and astrometric calibration using Python and Fortran. Produced high-precision stellar catalogs and proper-motion analysis to search for high velocity stars candidates and explore velocity dispersion profile of the cluster.</p>
+                <h3>🔭 Hubble Space Telescope Data Pipeline – NGC 6440</h3>
+                <div class="project-meta">HST WFC3/UVIS · PSF Photometry · Proper Motions</div>
+                <p>Developed a complete reduction pipeline for HST images of globular cluster NGC 6440. Performed distortion correction, astrometric alignment, and PSF photometry using Python and Fortran routines. Produced high-precision stellar catalogs and conducted proper-motion analysis to identify high-velocity star candidates and measure velocity dispersion profiles — contributing to dynamical studies of dense stellar systems.</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Astropy</span>
+                    <span class="tech-tag">Photutils</span>
+                    <span class="tech-tag">Fortran</span>
+                    <span class="tech-tag">CASA</span>
+                </div>
                 <div class="project-links">
                     <a href="https://github.com/shaima239/hst-ngc6440" target="_blank">📁 Code Repository</a>
                 </div>
             </div>
 
             <div class="project">
-                <h3>Machine Learning for Exoplanet Transit Classification</h3>
-                <p>Trained SVM and neural network models to detect exoplanetary transits in simulated and real datasets. Implemented data preprocessing, cross-validation, and error analysis in Python (scikit-learn, NumPy, Matplotlib).</p>
+                <h3>🪐 Machine Learning for Exoplanet Transit Classification</h3>
+                <div class="project-meta">SVM · Neural Networks · Feature Engineering</div>
+                <p>Built and compared ML classifiers (SVM and shallow neural networks) to identify exoplanet transit signals in synthetic and real light curves. Implemented data preprocessing, feature extraction from folded transit profiles, cross-validation, and ROC analysis. Achieved >92% classification accuracy on Kepler candidate data — demonstrating how ML accelerates transit detection in large survey data.</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">scikit-learn</span>
+                    <span class="tech-tag">TensorFlow</span>
+                    <span class="tech-tag">NumPy</span>
+                </div>
                 <div class="project-links">
-                    <a href="https://github.com/shaima239/exoplanet-detection-ml." target="_blank">📁 Code Repository</a>
+                    <a href="https://github.com/shaima239/exoplanet-detection-ml" target="_blank">📁 Code Repository</a>
                 </div>
             </div>
 
             <div class="project">
-                <h3>Exoplanet Transit Analysis: WASP‑12b</h3>
-                <p>End‑to‑end data reduction of space‑ and ground‑based observations for WASP‑12b. Calibrated raw CCD data, performed aperture photometry, and built differential light curves. Used Bayesian MCMC (emcee) to extract planetary parameters, integrating TESS and TASTE datasets.</p>
+                <h3>📉 Exoplanet Transit Analysis: WASP‑12b</h3>
+                <div class="project-meta">TESS + TASTE · Aperture Photometry · MCMC Modeling</div>
+                <p>Performed end-to-end transit analysis for the ultra-hot Jupiter WASP-12b. Reduced TESS and ground-based TASTE data, extracted differential photometry, and modeled transits using Bayesian MCMC (emcee) to refine orbital and planetary parameters. Combined multi-epoch datasets to improve precision and assess timing variations.</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Lightkurve</span>
+                    <span class="tech-tag">emcee</span>
+                    <span class="tech-tag">Corner.py</span>
+                </div>
                 <div class="project-links">
-                    <a href="https://github.com/shaima239/tess-taste-transit-analysis.git" target="_blank">📁 Code Repository</a>
+                    <a href="https://github.com/shaima239/tess-taste-transit-analysis" target="_blank">📁 Code Repository</a>
                 </div>
             </div>
 
             <div class="project">
-                <h3>Globular Cluster Morphology with Gaia DR3</h3>
-                <p>Processed Gaia DR3 data to quantify ellipticities of 126 globular clusters. Wrote custom Python scripts for cross‑matching, data visualization, and statistical analysis. Presented results on how these clusters are not as spherical as traditionally thought.</p>
+                <h3>🌌 Globular Cluster Morphology with Gaia DR3</h3>
+                <div class="project-meta">Astrometry · Ellipticity Measurement · Large-Scale Catalog Analysis</div>
+                <p>Analyzed Gaia DR3 data for 126 globular clusters, computing ellipticities and orientation angles using custom Python pipelines. Cross-matched cluster members, applied statistical cleaning, and visualized spatial distributions. Findings challenge the traditional spherical model, revealing significant flattening in the outer regions.</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Gaia DR3</span>
+                    <span class="tech-tag">Astroquery</span>
+                    <span class="tech-tag">Matplotlib</span>
+                </div>
                 <div class="project-links">
-                    <a href=" https://github.com/shaima239/globular-clusters-shapes.git" target="_blank">📁 Code Repository</a>
+                    <a href="https://github.com/shaima239/globular-clusters-shapes" target="_blank">📁 Code Repository</a>
                 </div>
             </div>
 
-            
+            <div class="project">
+                <h3>🛰️ Vegetation Response to Extreme Rainfall in Arid Muscat (Sentinel-2)</h3>
+                <div class="project-meta">Earth Observation · NDVI · Remote Sensing</div>
+                <p>Led a remote sensing case study after a record rainfall event (March 2026) in Muscat, Oman. Processed Sentinel-2 L2A imagery (10m resolution) pre- and post-event using Python (rasterio, numpy). Quantified NDVI changes: only 0.3% of the area showed greening, with a mean ΔNDVI = +0.004 — highlighting the challenges of arid ecosystem monitoring. This work demonstrates practical EO skills applicable to climate resilience and land cover change detection.</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Sentinel-2</span>
+                    <span class="tech-tag">rasterio</span>
+                    <span class="tech-tag">Geopandas</span>
+                    <span class="tech-tag">Google Earth Engine</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/shaima239/muscat-ndvi-rainfall" target="_blank">📁 Code Repository</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="goals">
+            <h2>Career Focus</h2>
+            <p>
+            I'm actively seeking roles in <strong>space technology, Earth observation, and data science</strong> — particularly where scientific rigor meets engineering application. I am excited about:
+            </p>
+            <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                <li>🛰️ Satellite data analysis / EO missions</li>
+                <li>📡 Pipeline development for astronomical or remote sensing data</li>
+                <li>🤖 Applied ML for geospatial or time-series data</li>
+                <li>🇴🇲 Contributing to Oman's National Space Programme and regional space initiatives</li>
+            </ul>
+            <p style="margin-top: 1rem;">
+            Open to collaborations, research software engineering roles, or industry positions where I can bridge astrophysics methods with real-world impact.
+            </p>
         </section>
 
         <section id="contact">
-            <h2>Contact</h2>
-            <p>📧 <a href="mailto:ashaimaamro@icloud.com">ashaimaamro@icloud.com</a><br>
-            🔗 <a href="https://github.com/shaima239" target="_blank">GitHub</a> | 
-            <a href="https://www.linkedin.com/in/al-shaima-al-rawahi" target="_blank">LinkedIn</a></p>
+            <h2>Contact & Connect</h2>
+            <div class="contact-info">
+                <p>📧 <a href="mailto:ashaimaamro@icloud.com">ashaimaamro@icloud.com</a><br>
+                🔗 <a href="https://github.com/shaima239" target="_blank">GitHub (shaima239)</a> — all repositories public<br>
+                💼 <a href="https://www.linkedin.com/in/al-shaima-al-rawahi" target="_blank">LinkedIn (Al Shaima Al Rawahi)</a><br>
+                📄 <a href="CV.pdf" target="_blank">Download my CV (PDF)</a> </p>
+            </div>
+            <p style="margin-top: 1rem; font-size: 0.9rem;">📍 Based in Oman / open to remote and international opportunities.</p>
         </section>
     </div>
     <footer>
-        <p>© 2025 Al Shaima Al Rawahi. Built with GitHub Pages.</p>
+        <p>© 2026 Al Shaima Al Rawahi — Built with semantic HTML & modern CSS. Hosted on GitHub Pages.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.8rem;">Last updated: April 2026</p>
     </footer>
 </body>
 </html>
